@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<div class="timeline">
+  {% for post in site.posts %}
+    {% include tweet.html post=post %}
+  {% endfor %}
+</div>

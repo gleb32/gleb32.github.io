@@ -1,0 +1,24 @@
+# Site settings
+lang: en
+permalink: /:year/:slug/
+theme: null
+
+# Collections
+collections:
+  drafts:
+    output: false
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+
+excerpt_separator: "<!-- more -->"

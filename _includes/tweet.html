@@ -1,0 +1,9 @@
+<article class="post{% unless forloop.first %} wow-slide{% endunless %}">
+  <header>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d" }}</time>
+  </header>
+  <div class="body">{{ post.excerpt | strip_html | truncate: 280 }}</div>
+  <footer>
+    <a href="{{ post.url }}" aria-label="Permalink">&#x2192;</a>
+  </footer>
+</article>

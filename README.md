@@ -1,1 +1,3 @@
-# gleb32.github.io
+# Monotweet
+
+A minimal, Twitter-inspired micro-blog built with Jekyll.
