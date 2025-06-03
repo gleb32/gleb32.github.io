@@ -1,0 +1,37 @@
+@import 'variables';
+
+* { box-sizing: border-box; }
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 17px; line-height: 1.6;
+  color: $text; background: $bg;
+  -webkit-font-smoothing: antialiased;
+}
+
+.timeline { max-width: 600px; margin: 3rem auto 6rem; }
+
+.post {
+  position: relative;
+  padding: 1.25rem 1rem 1rem 1.25rem;
+  border-left: 2px solid transparent;
+  transition: border-color .3s ease;
+  &:hover { border-color: $accent; }
+
+  header time { color: $muted; font-size: .85rem; }
+  .body { margin-top: .25rem; }
+
+  &:hover .body::after {
+    content: "|"; animation: blink 0.7s steps(1) infinite;
+    margin-left: .1rem; color: $accent;
+  }
+}
+
+@keyframes blink { 50% { opacity: 0; } }
+
+.wow-slide { opacity: 0; transform: translateX(-1rem); transition: 0.4s ease; }
+.wow-slide.visible { opacity: 1; transform: translateX(0); border-color: $accent; }
+
+body.dark {
+  background: #101215; color: #E5E7EB;
+  .post { border-color: rgba($accent, .4); }
+}
